@@ -13,10 +13,9 @@ Config.set('graphics','height',500)
 class MyApp(App):
     def update_number(self):
         self.lbl.text= self.form
-        
     def add_number(self,instance):
-        self.form= ''
-        print(self.form)
+        if self.form == '0':
+            self.form=''
         self.form += instance.text
         print(self.form)
 
